@@ -1,0 +1,31 @@
+---
+title: "Alejandro Sanchez HW1"
+output: html_document
+---
+Here is the replication of the code using the PUMS data.
+```{R}
+load("acs2017_ny_data.RData")
+acs2017_ny[1:10,1:7]
+attach(acs2017_ny)
+```
+When I typed this code into R it gave me the result shown above.
+The next instructions from the RMD file was to summarize the data using the following code.
+```{R}
+summary(acs2017_ny)
+```
+To find out the amount of people in the dataset I run this code 
+```{R}
+print(NN_obs <- length(AGE))
+```
+After this the instructions ask us to punch in the following code to find the average ages of both male and females so we can compare them.We are also asked to find the standard deviation of the ages. 
+```{R}
+mean(AGE[female == 1])
+sd(AGE[female == 1])
+mean(AGE[!female])
+sd(AGE[!female])
+```
+Looking at this data i found it interesting that business is still considered by many students the preferred route that they should go on. When we look at the number of students who selected business (9802)that is the most selected out of the ones provided. Another thing that I learned was that roughly 319 people lived at the poverty line or in poverty during the time that this data was collected. 
+
+
+
+
